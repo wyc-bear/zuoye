@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 216, 168);
+        }
+
+        header {
+            width: 100%;
+            height: 720px;
+            /* background-color: palegreen; */
+        }
+
+        main {
+            width: 100%;
+            height: 1000px;
+        }
+
+        section {
+            width: 100%;
+            height: 450px;
+            /* background-color: rgb(243, 173, 88); */
+        }
+
+        footer {
+            width: 100%;
+            height: 500px;
+            /* background-color: sienna; */
+        }
+
+        #xm {
+            position: relative;
+            border: 2px rgb(83, 59, 18) solid;
+            width: 700px;
+            height: 60px;
+            text-align: center;
+            font-size: 17px;
+            top: 15px;
+            left: 30%;
+        }
+        #bq1{
+            float: left;
+            top: 0;
+        }
+        #bq2{
+            float: right;
+            top: 0;
+        }
+       #ptz1{
+            float: right;
+            padding: 10px;
+            border-top: 5px rgb(11, 180, 247) groove;
+            border-bottom: 5px groove;
+            width: 200px;
+            height: 250px;
+        }
+
+        #max {
+            width: 1000px;
+            height: 700px;
+            align-items: center;
+            margin: 1% auto;
+            margin-top: 2%;
+        }
+
+        .re {
+            position: relative;
+            height: 400px;
+        }
+
+        .re ul {
+            list-style-type: none;
+        }
+
+        .re ul>li {
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            transition: 3s;
+            opacity: 0;
+        }
+
+        .re ul>li img {
+            width: 1000px;
+            height: 580px;
+            border-radius: 10px;
+            border: 15px solid #fffbd6;
+        }
+
+        #max ol {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(5, 75px);
+            grid-template-rows: auto;
+            grid-gap: 1em;
+            gap: 1em;
+            float: right;
+            margin-top: 570px;
+            list-style: none;
+            left: -200px;
+        }
+
+        #max ol li {
+            width: 25px;
+            height: 10px;
+            font-size: 15px;
+            line-height: 20px;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            border: 5px solid #999999;
+        }
+
+
+        span {
+            position: absolute;
+            left: 40%;
+            font-weight: bold;
+            font-size: 5rem;
+            color: #311b05;
+        }
+
+        span>tt {
+            position: relative;
+            display: inline-block;
+        }
+
+        span>tt:nth-child(2) {
+            margin-right: 1rem;
+
+        }
+
+        span>tt:nth-child(4) {
+            margin-right: 1rem;
+
+        }
+
+        .color {
+            animation: color 5s linear 2 alternate;
+        }
+
+        @keyframes color {
+            50% {
+                color: #a8e00b;
+                transform: scale(1.6);
+            }
+
+            to {
+                color: #e74c3c;
+                transform: scale(1);
+            }
+        }
+
+
+        .container {
+            width: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .box {
+            position: relative;
+            width: auto;
+            height: auto;
+            background: rgb(197, 250, 176);
+            box-shadow: 0 30px 30px rgb(0, 0, 0, .5);
+            float: left;
+            margin: 140px 0 0 10%;
+            border-radius: 80% 0 0 0;
+            left: 30px;
+        }
+        .box:nth-child(2){
+            float: left;
+            margin: 200px 30px 0 5%;
+            border-radius: 0 80% 0 0;
+        }
+        .box:nth-child(3){
+            float: left;
+            margin: 40px 30px 0 13%;
+           border-radius: 0 0 0 80%;
+        }
+        .box:nth-child(4){
+            float: left;
+            margin: 90px 30px 0 5%;
+             border-radius: 0 0 80% 0;
+        }
+
+        .box.imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 400px;
+        }
+
+        .box.imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+            
+
+        }
+        .pt1{
+            border-radius: 80% 0 0 0;
+        }
+        .pt2{
+            border-radius: 0 80% 0 0;
+        }
+        .pt3{
+            border-radius: 0 0 0 80%;
+        }
+        .pt4{
+            border-radius: 0 0 80% 0;
+        }
+
+        .box:hover .imgBx img {
+            opacity: 0;
+        }
+
+        .box .content {
+            position: absolute;
+            bottom: 20px;
+            left: 20%;
+            width: 50%;
+            height: 50px;
+            text-align: center;
+            transition: 0.5s;
+            overflow: hidden;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .box:hover .content {
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box .content h3{
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+        }
+
+        .box .content p {
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            line-height: 1.2em;
+            transition: 0.5s;
+            text-align: justify;
+        }
+
+        .box:hover .content p {
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+
+        #word {
+            position: relative;
+            float: left;
+            height: 400px;
+            width: 100px;
+            text-align: center;
+            font-size: 60px;
+            font-family: cursive;
+            background-image: -webkit-linear-gradient(left, red, orange, yellow, greenyellow, green, blue, purple);
+            top: 270px;
+            left: 70px;
+            transform: translate(-50%, -50%);
+            color: transparent;
+            background-size: 300% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: movingword 6s linear infinite alternate;
+        }
+
+        @keyframes movingword {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: -300% 0%;
+            }
+        }
+
+        .fg {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        #yy{
+            border:2px darkorange ;
+            width: 300px;
+            height: 300px;
+            position: absolute;    
+            margin: 50px 0 0 150px;
+            font-size: 20px;
+            text-indent: 2rem;
+            letter-spacing : 5px;
+            color: rgb(14, 162, 247);
+        }
+        #ptz{
+            border-top: 5px rgb(11, 180, 247) groove;
+            border-bottom: 5px groove;
+            width: 250px;
+            height: 250px;
+            float: right;
+            text-align: center;
+            text-indent: 2rem;
+            padding: 10px;
+            margin: 0 10px 0 0;
+            color: rgb(17, 65, 41);
+
+        }
+         #sz5{
+            position: absolute;
+            right: 10px;
+            margin: 320px 10px 0 0;
+            
+      }
+      .container {
+        width: 300px;
+            height: 100px;
+            display: flex;
+            position: absolute;
+            left: 570px;
+            justify-content: center;
+            text-align: center;
+            background: rgba(209, 230, 160, 0.308);
+
+        }
+
+        #w {
+            font-family: fira code;
+            font-size:50px ;
+            color: white;
+            filter: blur(0px);
+            animation: animate 2.5s linear infinite;
+
+        }
+        @keyframes animate {
+
+0%,
+100% {
+    color: #fff;
+    filter: blur(0px);
+    text-shadow: 0 0 10px #1e90ff,
+        0 0 20px #1e90ff,
+        0 0 30px #1e90ff,
+        0 0 40px #1e90ff,
+        0 0 100px #1e90ff,
+        0 0 200px #1e90ff,
+        0 0 300px #1e90ff,
+        0 0 400px #1e90ff;
+}
+
+5%,
+95% {
+    color: #111;
+    filter: blur(0px);
+}
+}
+
+      #lf{
+          position: absolute;
+          left: 550px;
+          margin: 100px 0 0 0;
+      }
+        h1{
+            color: #333;
+            font-size: 70px;
+            position: relative;
+        }
+        h1:after{
+            content: "购买方式";
+            color: transparent;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,yellow,#6D214F,#2e86de,#4cd137,#e84118);
+            background-clip: text;
+            -webkit-background-clip:text;
+            clip-path: circle(50px at 0% 50%);
+            -webkit-clip-path: circle(50px at 0% 50%);
+            animation: light 10s infinite;
+        }
+            
+        @keyframes light{
+            0%{
+                clip-path: circle(50px at 0% 50%);
+                -webkit-clip-path: circle(50px at 0% 50%);
+            }
+            50%{
+                clip-path: circle(50px at 100% 30%);
+                -webkit-clip-path: circle(50px at 100% 50%);
+            }
+            100%{
+                clip-path: circle(50px at 0% 30%);
+                -webkit-clip-path: circle(50px at 0% 50%);
+            }
+        }
+
+        .sz{
+            float: left;
+            margin: 50px 30px 0 30px;
+        }
+
+        .sz a{
+            text-decoration: none;
+            color: rgb(36, 25, 44);
+            font-size: 20px;
+        }
+        dl{
+            position: absolute;
+            font-size: 25px;
+            margin: 160px 20px  0 20px ;
+        }
+        dl:hover{
+            color: lawngreen;
+        }
+        
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="xm">韦艳春 201916180307 <p></p>我就是我，不一样的烟火，天空海阔，要做最坚强的泡沫</div>
+        <div id="bq1">我的前一个：阳菲 201916180306</div>
+        <div id="bq2">我的后一个：秦湘楠 201916180308</div>
+
+        <div id="max">
+            <div class="re">
+                <ul>
+                    <li><img src="pt1.jpg" alt=""></li>
+                    <li><img src="pt2.jpg" alt=""></li>
+                    <li><img src="pt4.jpg" alt=""></li>
+                    <li><img src="pt5.jpg" alt=""></li>
+                    <li><img src="pt6.jpg" alt=""></li>
+                </ul>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function () {
+                var box = this.document.getElementsByClassName("re")[0];
+                var lik = box.getElementsByTagName("li");
+                function fun(i, j) {//转换图片函数，就是把透明度改了一下
+                    lik[i].style.opacity = 1;
+                    lik[j].style.opacity = 0;
+                    lik[i + 5].style.backgroundColor = "#ffffff";//改一下小图标
+                    lik[j + 5].style.backgroundColor = "#00000000"
+                }
+                fun(0, 1);//初始化下
+                var i = 0;
+                function auto() {//轮播循环函数
+                    if (++i >= 5) {
+                        i = 0;
+                        fun(0, 4);
+                    }
+                    else fun(i, i - 1);
+                }
+                timer = this.setInterval(auto, 2000);
+                box.onmouseover = function () { //鼠标划上去，停止轮播
+                    console.log('good');
+                    clearInterval(timer);
+                }
+                box.onmouseout = function () { //鼠标划出，继续轮播
+                    timer = setInterval(auto, 10000); //调用定时器
+                }
+                var j = 0;
+                for (; j < 5; j++) {//点击小图标也可以转换图片
+                    lik[j + 5].ind = j;
+                    lik[j + 5].onclick = function () {
+                        fun(this.ind, i)
+                        i = this.ind;
+                    }
+                }
+
+            }
+        </script>
+    </header>
+    <main>
+        <span>品种展示</span>
+
+        <div class="contaniner">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="ht.jpg" alt="" width="500px" height=" 300px"  class="pt1">
+                </div>
+                <div class="content">
+                    <h3>黑提</h3>
+                    <p>黑提是黑提葡萄的简称，黑提葡萄为欧亚种·原产美国，1992年引入山东莱西市。 皮厚肉脆，果皮蓝黑色，光亮如漆，味酸甜，可溶性固形物含量17%以上。果柄不易脱落，耐贮运。</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="zjx.jpg" alt=""  width="500px" height=" 300px" class="pt2">
+                </div>
+                <div class="content">
+                    <h3>醉金香</h3>
+                    <p>这是玫瑰葡萄和巨峰葡萄杂交出来的品最后弄过，果皮呈现金黄色，果皮很薄很容易就会与果肉分离，吃起来也是非常方便的，肉质软硬适宜，酸甜可口，老少皆宜。</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="mrz.jpg" alt=""   width="500px" height=" 300px" class="pt3">
+                </div>
+                <div class="content">
+                    <h3>美人指</h3>
+                    <p>美人指葡萄的果实细长，先端呈现紫红色，十分光亮，基部颜色稍淡，就像是美女的手指染上了指甲油一样，所以得名美人指。其果肉脆嫩，没有香味，但是吃起来味道酸甜爽口，也受到人们的追捧。</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="hbs.jpg" alt=""   width="500px" height=" 300px" class="pt4">
+                </div>
+                <div class="content">
+                    <h3>红宝石</h3>
+                    <p>红宝石是一种晚熟无核的葡萄品种，果实形状一般呈现亮红紫色的圆锥形，果皮薄但是果肉十分脆嫩，口感适中，吃起来味酸爽口，近年来也受到人们的喜爱。</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const span = document.querySelector("span");
+            [...span.innerHTML].reduce(function (a, b, index) {
+                a == index && (span.innerHTML = "");
+                let tt = document.createElement("tt");
+                tt.innerHTML = b;
+                span.appendChild(tt);
+
+                tt.addEventListener("mouseover", function () {
+                    this.classList.add("color");
+                });
+                tt.addEventListener("animationend", function () {
+                    this.classList.remove("color");
+                });
+            }, 0);
+
+        </script>
+
+
+    </main>
+    <section>
+        <div id="word">营养成分</div>
+        <div id="yy">葡萄是一种含有丰富的其纤维素以及维生素的水果。多吃葡萄的话能够补充身体所需要的各种维生素，而且葡萄里面含有丰富的葡萄糖，能够有效地分解体内的物质，又说有促进身体吸收的功能，吃葡萄不容易引起肥胖，能够起到减肥的作用，葡萄里面还含有抗氧化因子，具有抗衰老的功能。
+        </div>
+        <div id="ptz">葡萄汁给你的身体带来的益处比橙汁更大。科学家日前首次完成了对13种果汁的抗氧化成分的科学分析。研究成果表明，在健康果汁中，紫葡萄汁占据了榜首位置，苹果汁和蔓越橘汁紧随其后。最为普遍和为人们所喜爱的橙汁反而排名不高。据介绍，橙汁包含的多酚——一种强抗氧化成分，比其他被测试的果汁都要少。   
+        </div>
+        <img src="ptz.jfif" alt="" id="ptz1">
+        <img src="sz5.jpg" alt="" width="250px" height=" 250px" id="sz5">
+        <div class="container">
+            <span id="w">葡萄酒</span>
+        </div>
+        <a href="https://item.jd.com/2055110.html">
+        <img src="lf.jpg" alt="" id="lf" width="400px" height=" 300px">
+        </a>
+    </section>
+    <footer>
+        <div class="fg">
+            <h1>购买方式</h1>
+        </div>
+         
+       <div class="sz">
+           <dl >黑提</dl> 
+           <a href="https://item.jd.com/10023928604932.html" id="p1">
+           <img src="sz1.jpg" alt="" width="300px" height=" 200px" ></a>
+       </div>
+       <div class="sz">
+        <dl >醉金香</dl>
+           <a href="https://item.jd.com/71799137938.html" id="p2">
+           <img src="sz3.jpg" alt="" width="300px" height=" 200px"></a>
+       </div>
+       <div class="sz">
+        <dl >美人指</dl>
+           <a href="https://item.jd.com/72014663485.html" id="p3">
+           <img src="sz2.jpg" alt="" width="300px" height=" 200px"></a>
+          
+       </div>
+       <div class="sz">
+        <dl >红宝石</dl>
+           <a href="https://item.jd.com/10024328413266.html" id="p4">
+           <img src="sz4.jpg" alt="" width="300px" height=" 200px"></a>
+       </div>
+    </footer>
+</body>
+
+</html>
