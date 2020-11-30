@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,17 +10,21 @@
             margin: 0;
             padding: 0;
         }
+        body{
+            background:rgba(135, 206, 235, 0.493) ;
+        }
 
         header {
-            background-image: url(timg2.gif);
+            background-image: url(timg.gif);
             width: 100%;
             height: 800px;
         }
+
         #box {
             width: 400px;
             height: 530px;
-           left: 50px;
-           top: 50px;
+            left: 50px;
+            top: 50px;
             overflow: hidden;
             position: relative;
         }
@@ -52,11 +56,12 @@
             line-height: 20px;
             text-align: center;
             border-radius: 50%;
-            background-color: #ccc; 
+            background-color: #ccc;
             margin-right: 10px;
         }
 
-        #left, #right {
+        #left,
+        #right {
             width: 50px;
             height: 80px;
             background-color: rgba(0, 0, 0, 0.2);
@@ -76,7 +81,8 @@
         #right {
             right: 0;
         }
-        #pp{
+
+        #pp {
             position: absolute;
             top: 50px;
             left: 35%;
@@ -84,40 +90,49 @@
             font-size: 6rem;
             color: cornflowerblue;
         }
-        div>span{
+
+        div>span {
             position: relative;
             display: inline-block;
         }
-        span>span:nth-child(4){
+
+        span>span:nth-child(4) {
             margin-right: 1rem;
 
         }
-        div>span:nth-child(7){
+
+        div>span:nth-child(7) {
             margin-right: 1rem;
 
         }
-        .color{
+
+        .color {
             animation: color 5s linear 2 alternate;
         }
-        @keyframes color{
-            10%{
-                color:#0ff187;
-                transform:scale(1.6) ;
+
+        @keyframes color {
+            10% {
+                color: #0ff187;
+                transform: scale(1.6);
             }
-            50%{
-                color:#f1c40f;
-                transform:scale(1.3) ;
+
+            50% {
+                color: #f1c40f;
+                transform: scale(1.3);
             }
-            to{
-                color:#e74c3c;
-                transform:scale(1) ;
+
+            to {
+                color: #e74c3c;
+                transform: scale(1);
             }
         }
-        a{
+
+        a {
             text-decoration: none;
-            font-size: 15px ;
+            font-size: 15px;
             color: white;
         }
+
         .demo-nav {
             width: 80px;
             position: absolute;
@@ -164,6 +179,7 @@
             opacity: 1;
             transform: translate3d(0, 0, 0);
         }
+
         .demo-nav li ul li:nth-of-type(1n) {
             transform: translate3d(100%, 0, 0);
         }
@@ -176,6 +192,7 @@
             opacity: 1;
             transform: translate3d(0, 0, 0);
         }
+
         .demo-nav li ul li:nth-of-type(2) {
             transition-delay: .1s;
         }
@@ -187,85 +204,243 @@
         .demo-nav li ul li:nth-of-type(4) {
             transition-delay: .3s;
         }
+
         .demo-nav li ul li:nth-of-type(5) {
             transition-delay: .4s;
         }
+
         article {
-            background: #aeddf3;
             width: 100%;
             height: 500px;
         }
-        #jb{
-            position: absolute;
-            margin: 50px 0 0 45%;
-            font-size: 60px;
-            font-style: oblique;
-            color: rgb(6, 26, 2);
-            font-family: cursive;
-            background-image: -webkit-linear-gradient(left,greenyellow,green,blue,purple);
-            transform:translate(-50%,-50%) ;
-            color: transparent;
-            background-size: 300% 100%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color:transparent ;
-            animation: movingword 6s linear infinite alternate;  
+
+        #jb {
+            position: relative;
+            margin:0 0 -3% 35%;
+            font-family: fira code;
+            font-size: 5rem;
+            color: white;
+            filter: blur(0.5px);
+            animation: animate 2.5s linear infinite;
+
         }
- @keyframes movingword{
-            0%{background-position: 0% 0%;}
-            100%{background-position: -300% 0%;}
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                color: #fff;
+                filter: blur(0.5px);
+                text-shadow: 0 0 10px #1e90ff,
+                    0 0 20px #1e90ff,
+                    0 0 30px #1e90ff,
+                    0 0 40px #1e90ff,
+                    0 0 100px #1e90ff,
+                    0 0 200px #1e90ff,
+                    0 0 300px #1e90ff,
+                    0 0 400px #1e90ff;
             }
+
+            5%,
+            95% {
+                color: #111;
+                filter: blur(0.5px);
+            }
+        }
+
+
+        .container{
+           position: absolute;
+           left: 45%;
+           margin: 150px 50px 10px 20px;
+           transform: translate(-50%,-50%);
+       }
+       .container span{
+          font-size:30px;
+          color: cornflowerblue;
+          background-image: -webkit-linear-gradient(left, red, orange, yellow, greenyellow, green, blue, purple);
+          text-transform: uppercase;
+          letter-spacing: 8px;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 500;
+          animation: wave 30s linear infinite;
+       }
+       @keyframes wave{
+           from{
+               background-position: 0 0;
+           }
+           to{
+               background-position: 1000px 0 ;
+           }
+       }
+
+       article>div:nth-child(3){
+        margin: 230px 0px 0px -25px;
+       }
+       article>div:nth-child(4){
+        margin: 310px 0px 0px -73px;
+       }
 
 
 
         main {
-            background: #fff;
             width: 100%;
-            height: 700px;
+            height: 500px;
         }
-        .xc{
 
-           padding: 50px;
+        .xc {
+
+            padding: 30px;
             font-size: 50px;
             font-style: oblique;
             color: rgb(6, 26, 2);
             text-shadow: silver;
-           
+
         }
+
+        .eyes {
+            perspective: 1000px;
+        }
+
+        .box {
+            transform-style: preserve-3d;
+            width: 300px;
+            height: 300px;
+            margin: -350px 0 0 500px;
+            animation: zhuan 15s ease;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .box div {
+            width: 200px;
+            height: 200px;
+            opacity: 1;
+            transition: all 10s ease 0s;
+            position: absolute;
+        }
+
+        .box .div1 {
+            background: green;
+            transform: translateZ(100px);
+        }
+
+        .box .div2 {
+            background: green;
+            transform: translateZ(-100px);
+        }
+
+        .box .div3 {
+            background: green;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .box .div4 {
+            background: green;
+            transform: rotateX(270deg) translateZ(100px);
+        }
+
+        .box .div5 {
+            background: green;
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .box .div6 {
+            background: green;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        @keyframes zhuan {
+            from {
+                transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateZ(360deg) rotateY(360deg);
+            }
+        }
+
+        .box:hover .div1 {
+            transform: translateZ(200px);
+        }
+
+        .box:hover .div2 {
+            transform: translateZ(-200px);
+        }
+
+        .box:hover .div3 {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+
+        .box:hover .div4 {
+            transform: rotateX(270deg) translateZ(200px);
+        }
+
+        .box:hover .div5 {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        .box:hover .div6 {
+            transform: rotateY(90deg) translateZ(200px)
+        }
+
         section {
-            background: #76b852;
             width: 100%;
-            height: 500px;
+            height: 1000px;
         }
-        #xq{
+
+        #xq {
             position: absolute;
             margin: 50px 0 0 45%;
             font-size: 60px;
             font-style: oblique;
             color: rgb(6, 26, 2);
             text-shadow: silver;
-            background-image: -webkit-linear-gradient(left,red,orange,yellow,greenyellow,green,blue,purple);
-            transform:translate(-40%,-40%) ;
+            background-image: -webkit-linear-gradient(left, red, orange, yellow, greenyellow, green, blue, purple);
+            transform: translate(-40%, -40%);
             color: transparent;
             background-size: 300% 100%;
             background-clip: text;
             -webkit-background-clip: text;
-            -webkit-text-fill-color:transparent ;
-            animation: movingword 6s linear infinite alternate;  
+            -webkit-text-fill-color: transparent;
+            animation: movingword 6s linear infinite alternate;
         }
-        @keyframes movingword{
-            0%{
-                background-position: 0% 0%;}
-                100%{
-                    background-position: -300% 0%;
-                }
+
+        @keyframes movingword {
+            0% {
+                background-position: 0% 0%;
             }
+
+            100% {
+                background-position: -300% 0%;
+            }
+        }
+
+        .tt{
+            position: relative;
+            font-size: 20px;
+            color: #03212b;
+            top: 100px;
+            padding: 0 0 10px 50px;
+            letter-spacing: 5px;
+
+        }
+        .qq{
+            float: right;
+            margin: 100px 60px 20px 0px ;
+           
+        }
+        .qq>img{
+             border-radius: 50%;
+        }
+
         footer {
-            background: #fff;
             width: 100%;
             height: 300px;
         }
-        #jx{
+
+        #jx {
             position: absolute;
             margin: 20px 0 0 40%;
             font-size: 50px;
@@ -280,26 +455,26 @@
     <header>
         <div id="pp">Personal profile</div>
         <script>
-             const div = document.querySelector("div");
-        [...div.innerHTML].reduce(function(a,b,index){
-            a== index &&(div.innerHTML="");
-            let span=document.createElement("span");
-            span.innerHTML=b;
-            div.appendChild(span);
+            const div = document.querySelector("div");
+            [...div.innerHTML].reduce(function (a, b, index) {
+                a == index && (div.innerHTML = "");
+                let span = document.createElement("span");
+                span.innerHTML = b;
+                div.appendChild(span);
 
-            span.addEventListener("mouseover",function(){
-                this.classList.add("color");
-            });
-            span.addEventListener("animationend",function(){
-                this.classList.remove("color");
-            });
-        },0);
+                span.addEventListener("mouseover", function () {
+                    this.classList.add("color");
+                });
+                span.addEventListener("animationend", function () {
+                    this.classList.remove("color");
+                });
+            }, 0);
         </script>
         <div id="box" class="all">
             <div class="screen">
                 <ul>
-                    <li><img src="me.jpg" width="400px" height="530px" alt=""></li>
                     <li><img src="my.jpg" width="400px" height="530px" alt=""></li>
+                    <li><img src="me.jpg" width="400px" height="530px" alt=""></li>
                 </ul>
                 <ol></ol>
             </div>
@@ -312,34 +487,35 @@
             <ul class="menu fllil">
                 <li>Home
                     <ul class="sub-menu">
-                        <li><a href="#">基本信息</a></li>
-                        <li><a href="#">我的相册</a></li>
-                        <li><a href="#">兴趣爱好</a></li>
-                        <li><a href="#">有惊喜哦</a></li>
+                        <li><a href="#jb">基本信息</a></li>
+                        <li><a href=".xc">我的相册</a></li>
+                        <li><a href="#xq">兴趣爱好</a></li>
+                        <li><a href="#jx">有惊喜哦</a></li>
                     </ul>
                 </li>
-               
+
             </ul>
         </div>
+
         <script>
             var interval = 3000;
-    
+
             var box = document.getElementById('box');
             var screen = box.children[0];
             var ul = screen.children[0];
             var ol = screen.children[1];
-    
+
             var arrLeft = document.getElementById('left');
             var arrRight = document.getElementById('right');
             var imgWidth = box.offsetWidth;
-    
+
             function setInnerText(element, content) {
                 if (typeof element.innerText === 'string')
                     element.innerText = content;
                 else
                     element.textContent = content;
             }
-    
+
             function animate(element, target, callback) {
                 if (element.timerId)
                     clearInterval(element.timerId);
@@ -365,7 +541,7 @@
                 setInnerText(li, i + 1);
                 ol.appendChild(li);
                 li.index = i;
-    
+
                 li.onclick = liClick;
             }
             ol.children[0].style.backgroundColor = 'dodgerblue';
@@ -388,17 +564,17 @@
                 this.style.backgroundColor = 'dodgerblue';
                 index = this.index;
             }
-    
+
             var cloneLi = ul.children[0].cloneNode(true);
             ul.appendChild(cloneLi);
-    
+
             var index = 0;
             arrRight.onclick = function () {
                 if (index === count) {
                     index = 0;
                     ul.style.left = '0px';
                 }
-    
+
                 ++index;
                 if (index < count) {
                     ol.children[index].click();
@@ -409,14 +585,14 @@
                     ol.children[0].style.backgroundColor = 'dodgerblue';
                 }
             }
-    
+
             arrLeft.onclick = function () {
                 if (index === 0) {
                     index = count;
                     ul.style.left = -index * imgWidth + 'px';
                 }
                 --index;
-                    ol.children[index].click();
+                ol.children[index].click();
             }
             var timerId = setInterval(function () {
                 arrRight.click();
@@ -425,15 +601,47 @@
     </header>
     <article>
         <div id="jb">基本信息</div>
+        <div class="container">
+            <span id="xx1">学号：201916180307</span>
+        </div>
+        <div class="container">
+            <span id="xx2">班级：通信1903班</span>
+        </div>
+        <div class="container">
+            <span id="xx3">姓名：韦艳春</span>
+        </div>
+        
     </article>
     <main>
         <ul class="xc">我</ul>
         <ul class="xc">的</ul>
         <ul class="xc">相</ul>
         <ul class="xc">册</ul>
+
+        <div class="eyes">
+            <div class="box">
+                <div class="div1"><img src="my.jpg" width="100%" height="100%"></div>
+                <div class="div2"><img src="me.jpg" width="100%" height="100%"></div>
+                <div class="div3"><img src="my1.jpeg" width="100%" height="100%"></div>
+                <div class="div4"><img src="my2.jpg" width="100%" height="100%"></div>
+                <div class="div5"><img src="my3.jpg" width="100%" height="100%"></div>
+                <div class="div6"><img src="my4.jpg" width="100%" height="100%"></div>
+            </div>
+        </div>
+
     </main>
     <section>
         <div id="xq">兴趣爱好</div>
+        <div class="tt">兴趣爱好：听音乐、收藏车模、练字、旅行、爬山等等</div>
+        <div class="tt">我最近喜欢听的音乐</div>
+        <a href="https://y.qq.com/n/yqq/album/003YQu7349cT7g.html" class="qq"> <img src="qq1.jpg" alt="" > </a>
+        <a href="https://y.qq.com/n/yqq/album/0000PlWG1tS3LL.html" class="qq"> <img src="qq2.jpg" alt="" > </a>
+        <a href="https://y.qq.com/n/yqq/album/0021brYM11q58W.html" class="qq"> <img src="qq3.jpg" alt="" > </a>
+        <a href="https://y.qq.com/n/yqq/album/003eKLOd1Ie7lD.html" class="qq"> <img src="qq4.jpg" alt="" > </a>
+        <a href="https://y.qq.com/n/yqq/album/004C9Kg7275J7H.html" class="qq"> <img src="qq5.jpg" alt="" > </a>
+        <a href="https://y.qq.com/n/yqq/album/001qaUeM0o3g8Q.html" class="qq"> <img src="qq6.jpg" alt="" > </a>
+        <a href="https://y.qq.com/n/yqq/album/003qfpF43lRtew.html" class="qq"> <img src="qq7.jpg" alt="" > </a>
+        <a href="https://y.qq.com/n/yqq/album/003sRVj11lTJPA.html" class="qq"> <img src="qq8.jpg" alt="" > </a>
     </section>
     <footer>
         <div id="jx">感谢您的浏览！</div>
