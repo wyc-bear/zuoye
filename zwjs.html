@@ -448,6 +448,78 @@
             color: rgb(6, 26, 2);
             text-shadow: silver;
         }
+        .fg {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+           
+
+        }
+        .fg >span {
+            top: 100px;
+            font-family: fira code;
+            font-size: 2rem;
+            color: white;
+            filter: blur(0px);
+            animation: animate 2.5s linear infinite;
+
+        }
+
+        span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        span:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        span:nth-child(3) {
+            animation-delay: 1.0s;
+        }
+        span:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+        span:nth-child(5) {
+            animation-delay: 2s;
+        }
+        span:nth-child(6) {
+            animation-delay: 2.5s;
+        }
+
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                color: #fff;
+                filter: blur(0px);
+                text-shadow: 0 0 10px #ff9e1e,
+                    0 0 20px #ff781e,
+                    0 0 30px #ff961e,
+                    0 0 40px #ff9e1e,
+                    0 0 100px #ffb81e,
+                    0 0 200px #ffb01e,
+                    0 0 300px #ff961e,
+                    0 0 400px #ff961e;
+            }
+
+            5%,95% {
+                color: #111;
+                filter: blur(0px);
+                text-shadow:none;
+            }
+        }
+
+        #dy{
+            position: relative;
+            margin: 500px 0 0  35%;
+        }
+        #dy img{
+            border-radius: 5%;
+            width: 500px;
+            height: 300px;
+        }
     </style>
 </head>
 
@@ -645,6 +717,15 @@
     </section>
     <footer>
         <div id="jx">感谢您的浏览！</div>
+        <div class="fg">
+            <span>推</span>
+            <span>荐</span>
+            <span>一</span>
+            <span>部</span>
+            <span>电</span>
+            <span>影</span>
+        </div>
+        <a href="https://movie.douban.com/subject/1292052/?tag=%E8%B1%86%E7%93%A3%E9%AB%98%E5%88%86&from=gaia_video" id="dy"> <img src="d'y.jpg" alt=""></a>
     </footer>
 </body>
 
